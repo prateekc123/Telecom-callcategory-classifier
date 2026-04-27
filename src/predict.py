@@ -4,8 +4,12 @@ import re
 # -----------------------------
 # Load model and vectorizer
 # -----------------------------
-model = joblib.load('models/model.pkl')
-vectorizer = joblib.load('models/vectorizer.pkl')
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model = joblib.load(os.path.join(BASE_DIR, "models/model.pkl"))
+vectorizer = joblib.load(os.path.join(BASE_DIR, "models/vectorizer.pkl"))
 
 
 # -----------------------------
