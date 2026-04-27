@@ -1,5 +1,10 @@
 import streamlit as st
-from src.predict import predict
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+
+from predict import predict
 
 st.set_page_config(page_title="Telecom Intent Classifier", layout="centered")
 
